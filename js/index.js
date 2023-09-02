@@ -4,7 +4,7 @@ let counterId
 const loadAllCatagory = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/videos/categories')
     const data = await res.json()
-    const catagories = data.data
+     const catagories = data.data
     displayCatagory(catagories)
     //for initial load
    showCatagory(1000,false)
@@ -17,12 +17,12 @@ function sortByView(){
 
 }
 
-const displayCatagory = (catagories)=>{
+const displayCatagory = (catagories,isActiveId)=>{
     const catagoryContainer = document.getElementById('catagory-container')
     for (const catagory of catagories) {
        const catagoryButton = document.createElement('div')
        catagoryButton.innerHTML = `
-       <button onclick="showCatagory('${catagory.category_id}')" class= "bg-[#D3D3D3] rounded-md font-medium px-5 py-2">${catagory.category}</button>`
+       <button id="${catagory.category_id}" onclick="showCatagory('${catagory.category_id}')" class= "bg-[#D3D3D3] rounded-md font-medium px-5 py-2">${catagory.category}</button>`
        catagoryContainer.appendChild(catagoryButton)
     }
     
@@ -33,7 +33,6 @@ const displayCatagory = (catagories)=>{
     const data = await res.json()
     const catagoryData = data.data
    const catagorylength = catagoryData.length
-    console.log(catagoryData)
    counterId = catagoryId
    if(isSort){
         for (let i =0;i<catagorylength;i++) {
