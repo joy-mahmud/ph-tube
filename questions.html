@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,31 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header class="container mx-auto text-center bg-[#20A1F1] text-white rounded-lg mt-5 p-3">
         <h3 class="text-4xl font-semibold">Some questions and answers of javascript</h3>
     </header>
     <main class="container mx-auto mt-5 space-y-2">
         <h3 class="text-3xl font-semibold">1. Discus the scope of var, let and const?</h3>
-        <p class="text-2xl font-normal"><span>Ans: When var is declared outside the function the scope of var is global that means it can be accessed anywhere from the the whole window </span></p>
-        <h3>2. Tell us the usecases of null and undefined?</h3>
-        <p><span>Ans:</span></p>
-        <h3>3. What do you mean by REST API?</h3>
-        <p><span>Ans:</span></p>
+        <p class="text-2xl font-normal"><span class="txt-[20px] font-bold">Ans:</span> When var is declared outside the function the scope of var is global
+                that means it can be accessed anywhere from the the whole window. 
+            The let is blocked scope it cannot be accessed outside the carli braces ,the value of let can be reassigned, the const is also blocked scope but the value of const cannot be reassigned.
+            
+            </span></p>
+        <h3 class="text-3xl font-semibold">2. Tell us the usecases of null and undefined?</h3>
+        <p class="text-2xl font-normal"><span class="txt-[20px] font-bold">Ans:</span>The undefined is the condition where a variable is declared but there is no value assigned in it
+                but the null is the value which is assigned in the variable, null is used for , when a value is absence
+                , but undefined is where no value is assigned at all</span></p>
+        <h3 class="text-3xl font-semibold">3. What do you mean by REST API?</h3>
+        <p class="text-2xl font-normal"><span class="txt-[20px] font-bold">Ans:</span>A rest api is a reRepresenting the state transfer
+            Whenever a RESTful API is called, the server will transfer to the client a representation of the state of
+            the requested resource.
+            WE  use Api just for every day. If you’re trying to find videos about biking on YouTube. You’d
+            type “biking” into the YouTube search field, hit enter, and you’ll then see a list of videos about biking.
+            Conceptually, a REST API works just like this! You search for something, and you get a list of results back
+            from the service that you’re requesting from.</p>
     </main>
 </body>
+
 </html>

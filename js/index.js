@@ -1,21 +1,21 @@
 
 let counterId
-//const sortByView = document.getElementById('sort-by-btn')
-function sortByView(){
-    showCatagory(counterId,true)
 
-}
 const loadAllCatagory = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/videos/categories')
     const data = await res.json()
     const catagories = data.data
-   console.log(catagories)
     displayCatagory(catagories)
     //for initial load
    showCatagory(1000,false)
 }
 
 loadAllCatagory()
+
+function sortByView(){
+    showCatagory(counterId,true)
+
+}
 
 const displayCatagory = (catagories)=>{
     const catagoryContainer = document.getElementById('catagory-container')
@@ -48,14 +48,9 @@ const displayCatagory = (catagories)=>{
             
     }
    }
-  
-   console.log(catagoryData)
-
-//    viewArray.sort(function(x, y){return y-x});
    
    displayDetails(catagoryData,catagorylength)
     
-
  }
  
 
@@ -104,7 +99,6 @@ const displayCatagory = (catagories)=>{
         display404()
     }
     
-    //console.log(catagoryData.length)
  
  }
  const display404 = ()=>{
