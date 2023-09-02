@@ -83,14 +83,15 @@ const displayCatagory = (catagories,isActiveId)=>{
         <div class ="relative"><img class="rounded-lg mb-5 h-[200px] w-full" src="${content.thumbnail}" alt="">${postedDate?timeshow:""}</div>
         <div class="mb-[10px] flex gap-2">
             <img class="rounded-full h-[40px] w-[40px]" src="${content.authors[0].profile_picture}">
+            <div flex flex-col>
             <h3 class="font-bold text-[20px]">${content.title}</h3>
+            <div class="flex gap-2 items-center mb-[10px]">
+                <p class="text-[18px] font-normal">${content.authors[0].profile_name}</p>
+                ${content.authors[0].verified?verifiedIcon:""}   
+            </div>
+            <p>${content.others.views} views</p>
         </div>
-        <div class="flex gap-2 items-center mb-[10px]">
-            <p class="text-[18px] font-normal">${content.authors[0].profile_name}</p>
-            ${content.authors[0].verified?verifiedIcon:""}
-            
-        </div>
-        <p>${content.others.views}</p>`
+        </div>`
         cardContainer.appendChild(card)
     })
 
